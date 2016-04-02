@@ -12,3 +12,9 @@ var sub = word.slice(5);
 
 // We can use the backticks to interpolate the string with a variable
 console.log(`The second word is ${sub}`);
+
+// To get the current directory path
+console.log(__dirname);
+
+// and to get the current path with the filename, we use
+console.log(__filename);
