@@ -6,6 +6,7 @@ exec('ls', function(error, output){
 	// If there is an error, we can handle it
 	if (error) {
 		console.log("Error is found!");
+		// or throw err;
 	} else {
 		// Here we can output the items in the directory
 		console.log(output);
