@@ -16,6 +16,9 @@ files.forEach(function(filename){
 	var file = path.join(__dirname, '4_modules', filename);
 	// Check to make sure the file's stats checkout and that it's not the Mac hidden file
 	if (fs.statSync(file).isFile() && filename !== '.DS_Store') {
+		// Print File name
+		console.log(`READING FILE ${filename}`);
+
 		// Now we can read the file
 		fs.readFile(file, 'UTF8', function(error, contents){
 			// Print the file's information
