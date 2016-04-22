@@ -15,7 +15,7 @@ var Person ={
 rl.question("What is the subject of this datastore?", function(response){
 
 	var title = response.trim();
-	fs.writeFileSync(`${title}.md`, title+'\n')
+	fs.writeFile(`${title}.md`, title+ '\n' + '='.repeat(title.length) +'\n')
 
 	rl.setPrompt("Enter the name and location entry: ");
 	rl.prompt();
