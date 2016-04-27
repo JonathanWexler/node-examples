@@ -1,0 +1,18 @@
+.top{
+	color: lightblue;
+}
+.sub{
+	font-size: 12px;
+	color: lightgreen;
+}
+.bottom{
+	color: darkblue;
+}
+.box{
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+}
+img{
+	width: 100%;
+}
