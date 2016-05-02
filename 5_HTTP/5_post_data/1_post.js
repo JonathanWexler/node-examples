@@ -16,7 +16,7 @@ http.createServer(function(req, res){
 		}else{
 			res.writeHead(404, {"Content-Type":"text/plain"});
 			res.end("404 File Not Found");
-		};
+		}
 	}else if(req.method === 'POST'){
 
 		var body = '';
@@ -30,14 +30,14 @@ http.createServer(function(req, res){
 
 		// When the request is complete, respond with the data
 		req.on('end', function(){
-			
+
 			console.log("Finished POSTING");
 			res.writeHead(200, {"Content-Type":"text/plain"});
 			res.end(body);
 		});
 
-	};
+	}
 
 }).listen(port);
 
-console.log(`Server Running on ${port}`)
+console.log(`Server Running on ${port}`);
