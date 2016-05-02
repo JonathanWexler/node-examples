@@ -17,14 +17,23 @@ http.createServer(function(req, res){
 			res.writeHead(404, {"Content-Type":"text/plain"});
 			res.end("404 File Not Found");
 		};
-	}else if(req.meth === 'POST'){
+	}else if(req.method === 'POST'){
+
+		var body = '';
 
 		// We set up a listener for the request to see if data is piped in
-		res.on('data', function(fragment){
-			console.log(fragment);			
+		req.on('data', function(fragment){
+
+			// As it is piped in, add it to the body variable
+			body += fragment;			
 		});
-		res.on('end', function(){
+
+		// When the request is complete, respond with the data
+		req.on('end', function(){
+			
 			console.log("Finished POSTING");
+			res.writeHead(200, {"Content-Type":"text/plain"});
+			res.end(body);
 		});
 
 	};
