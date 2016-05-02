@@ -1,0 +1,32 @@
+[
+	{
+		"title":"The Love Story",
+		"author":"Henry Thompson",
+		"year":"2001",
+		"genre":"nonfiction"
+	},
+{
+		"title":"The Space Story",
+		"author":"James Jameson",
+		"year":"1989",
+		"genre":"fiction"
+	},
+{
+		"title":"The Politics Story",
+		"author":"Rachel Rachels",
+		"year":"2008",
+		"genre":"nonfiction"
+	},
+{
+		"title":"The Sports Story",
+		"author":"Sports McGee",
+		"year":"1992",
+		"genre":"nonfiction"
+	},
+{
+		"title":"The Zombie Story",
+		"author":"Horror Thrillberg",
+		"year":"2011",
+		"genre":"fiction"
+	}
+]
