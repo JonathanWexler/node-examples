@@ -13,11 +13,15 @@ http.createServer(function(req, res){
 		res.end(JSON.stringify(data));
 
 		// If the user requests the fiction url
-	}else if (req.url === 'fiction'){
+	}else if (req.url === '/fiction'){
 
-		// jsut call the function for filtering fiction data, passing the response object
+		// just call the function for filtering fiction data, passing the response object
 		fiction(res);
 
+	}else if (req.url === '/nonfiction'){
+
+		// call the function for nonfiction titles
+		nonfiction(res);
 
 	} else {
 		// If no defined route is requested, 404
@@ -30,7 +34,7 @@ http.createServer(function(req, res){
 console.log(`Server is running on port ${port}`);
 
 // We can create functions to represent the different data filters
-function fiction (argument) {
+function fiction (res) {
 
 	// Here we create a variable that collects filtered items, one-by-one fromt the whole data set, returning true or false for that item if we want it
 	var onlyFictionItems = data.filter(function(item){
@@ -40,3 +44,15 @@ function fiction (argument) {
 	// Then we need to end the response and return that data object
 	res.end(JSON.stringify(onlyFictionItems));
 };
+
+
+function nonfiction (res) {
+	
+	// return items of the data object that are nonfiction in an array
+	var onlyNonFictionItems = data.filter(function(item){
+		return item.genre === 'nonfiction';
+	});
+
+	// return only items in teh nonfiction list
+	res.end(JSON.stringify(onlyNonFictionItems));
+}
