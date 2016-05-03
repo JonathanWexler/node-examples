@@ -1,0 +1,21 @@
+{
+  "name": "express_basics",
+  "version": "1.0.0",
+  "description": "A mini app to demonstrate express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "app",
+    "demo"
+  ],
+  "author": "Jon Wexler",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "express": "^4.13.4"
+  }
+}
