@@ -1,0 +1,12 @@
+{
+  "name": "express-cors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This app is to demonstrate basic api building with express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jon Wexler",
+  "license": "MIT"
+}
