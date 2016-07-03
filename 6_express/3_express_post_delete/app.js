@@ -56,6 +56,16 @@ app.post('/api/post', function(req, res){
   res.json(data);
 });
 
+// Lastly, we want to handle deletion requests
+app.delete("/api/:name", function(req, res){
+  // We can use a predicate function to loop through our data and only keep those that return true to our condition
+  data = data.filter(function(item){
+      // Check all lowercase so there is no confusion about data
+      return item.name.toLowerCase() !== req.params.name.toLowerCase();
+  });
+  res.json(data);
+}); 
+
 // Start server
 app.listen(4040);
 // Console message

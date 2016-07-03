@@ -31,4 +31,14 @@ function formatData (data) {
     $('.data').append("<h1>" + this.name +"</h1><br><h3>" + this.location +"</h3><br>")
 
   });
-}
+
+    // When double clicking on an item, delete it
+    $('h1').dblclick(function(){
+      console.log(`Deleting ${$(this).text()}`);
+      $.ajax({
+        url: `/api/${$(this).text()}` ,
+        type: "DELETE",
+        success: formatData
+      });
+    }); 
+  }
