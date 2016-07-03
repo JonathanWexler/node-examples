@@ -1,0 +1,22 @@
+<!-- This is a basic html page that will rely on the node/express web server to fully function -->
+<!DOCtype html>
+<html>
+<head>
+  <title>Express</title>
+  <meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"/>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <h1>Add locations</h1>
+  <form method='POST' action='/api/post'>
+    <label>Name</label>
+    <input id="name" type="text" name="name">
+    <label>Location</label>
+    <input id="location" type="text" name="location">
+    <input type="submit" name="send">
+  </form> 
+  <div class="data"></div>
+</body>
+</html>
